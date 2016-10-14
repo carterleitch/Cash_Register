@@ -35,7 +35,7 @@ namespace Cash_Register
             sheets = Convert.ToInt32(gradeInput.Text);
             tests = Convert.ToInt32(amountInput.Text);
 
-            price = SHEETS_COST * sheets + TEST_COSTS * tests; 
+            price = SHEETS_COST * sheets + TEST_COSTS * tests;  
             taxAmount = TAX_AMOUNT * price;
             totalWithTax = taxAmount + price;
 
