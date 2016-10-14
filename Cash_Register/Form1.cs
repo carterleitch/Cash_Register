@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
+using System.Media;
 
 namespace Cash_Register
 {
@@ -16,9 +18,14 @@ namespace Cash_Register
         const double TEST_COSTS = 3.75;
         const double TAX_AMOUNT = 0.13;
 
-        int tests, sheets;
+        int tests, sheets, amountPaid;
 
-        double price, taxAmount, totalWithTax;
+        double price, taxAmount, totalWithTax, changeDue;
+
+        private void changeLabel_Click(object sender, EventArgs e)
+        {
+
+        }
 
         public Form1()
         {
@@ -30,18 +37,30 @@ namespace Cash_Register
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) 
         {
             sheets = Convert.ToInt32(gradeInput.Text);
             tests = Convert.ToInt32(amountInput.Text);
+            
 
             price = SHEETS_COST * sheets + TEST_COSTS * tests;  
             taxAmount = TAX_AMOUNT * price;
             totalWithTax = taxAmount + price;
+            
 
             costOutput.Text = price.ToString("C");
             taxOutput.Text = taxAmount.ToString("C");
             costWithTaxOutput.Text = totalWithTax.ToString("C");
+        }
+
+        private void changeButton_Click(object sender, EventArgs e)
+        {
+            amountPaid = Convert.ToInt32(payBox.Text);
+
+            changeDue = amountPaid - totalWithTax;
+
+            changeOutput.Text = changeDue.ToString("C");
+
         }
     }
 }
