@@ -38,7 +38,7 @@
             this.amountInput = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.costOutput = new System.Windows.Forms.Label();
-            this.payBox = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.paidLabel = new System.Windows.Forms.Label();
             this.changeLabel = new System.Windows.Forms.Label();
             this.changeOutput = new System.Windows.Forms.Label();
@@ -47,8 +47,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.taxOutput = new System.Windows.Forms.Label();
             this.costWithTaxOutput = new System.Windows.Forms.Label();
-            this.changeButton = new System.Windows.Forms.Button();
-            this.receiptButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // titleLabel
@@ -152,12 +150,12 @@
             this.costOutput.Size = new System.Drawing.Size(0, 21);
             this.costOutput.TabIndex = 9;
             // 
-            // payBox
+            // textBox1
             // 
-            this.payBox.Location = new System.Drawing.Point(230, 428);
-            this.payBox.Name = "payBox";
-            this.payBox.Size = new System.Drawing.Size(100, 20);
-            this.payBox.TabIndex = 10;
+            this.textBox1.Location = new System.Drawing.Point(230, 428);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 10;
             // 
             // paidLabel
             // 
@@ -173,20 +171,18 @@
             // 
             this.changeLabel.AutoSize = true;
             this.changeLabel.Font = new System.Drawing.Font("AR BERKLEY", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.changeLabel.Location = new System.Drawing.Point(119, 495);
+            this.changeLabel.Location = new System.Drawing.Point(119, 460);
             this.changeLabel.Name = "changeLabel";
             this.changeLabel.Size = new System.Drawing.Size(56, 21);
             this.changeLabel.TabIndex = 12;
             this.changeLabel.Text = "Change";
-            this.changeLabel.Click += new System.EventHandler(this.changeLabel_Click);
             // 
             // changeOutput
             // 
             this.changeOutput.AutoSize = true;
-            this.changeOutput.Font = new System.Drawing.Font("AR BERKLEY", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.changeOutput.Location = new System.Drawing.Point(226, 495);
+            this.changeOutput.Location = new System.Drawing.Point(227, 464);
             this.changeOutput.Name = "changeOutput";
-            this.changeOutput.Size = new System.Drawing.Size(0, 21);
+            this.changeOutput.Size = new System.Drawing.Size(0, 13);
             this.changeOutput.TabIndex = 13;
             // 
             // costLabel
@@ -237,46 +233,13 @@
             this.costWithTaxOutput.Size = new System.Drawing.Size(0, 21);
             this.costWithTaxOutput.TabIndex = 18;
             // 
-            // changeButton
-            // 
-            this.changeButton.BackColor = System.Drawing.Color.White;
-            this.changeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.changeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.changeButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.changeButton.Font = new System.Drawing.Font("AR BERKLEY", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.changeButton.ForeColor = System.Drawing.Color.Black;
-            this.changeButton.Location = new System.Drawing.Point(169, 454);
-            this.changeButton.Name = "changeButton";
-            this.changeButton.Size = new System.Drawing.Size(115, 23);
-            this.changeButton.TabIndex = 19;
-            this.changeButton.Text = "Calculate change";
-            this.changeButton.UseVisualStyleBackColor = false;
-            this.changeButton.Click += new System.EventHandler(this.changeButton_Click);
-            // 
-            // receiptButton
-            // 
-            this.receiptButton.BackColor = System.Drawing.Color.White;
-            this.receiptButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.receiptButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.receiptButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.receiptButton.Font = new System.Drawing.Font("AR BERKLEY", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.receiptButton.ForeColor = System.Drawing.Color.Black;
-            this.receiptButton.Location = new System.Drawing.Point(169, 530);
-            this.receiptButton.Name = "receiptButton";
-            this.receiptButton.Size = new System.Drawing.Size(115, 38);
-            this.receiptButton.TabIndex = 20;
-            this.receiptButton.Text = "Print Receipt";
-            this.receiptButton.UseVisualStyleBackColor = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Maroon;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(783, 573);
-            this.Controls.Add(this.receiptButton);
-            this.Controls.Add(this.changeButton);
+            this.ClientSize = new System.Drawing.Size(438, 490);
             this.Controls.Add(this.costWithTaxOutput);
             this.Controls.Add(this.taxOutput);
             this.Controls.Add(this.label1);
@@ -285,7 +248,7 @@
             this.Controls.Add(this.changeOutput);
             this.Controls.Add(this.changeLabel);
             this.Controls.Add(this.paidLabel);
-            this.Controls.Add(this.payBox);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.costOutput);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.amountInput);
@@ -317,7 +280,7 @@
         private System.Windows.Forms.TextBox amountInput;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label costOutput;
-        private System.Windows.Forms.TextBox payBox;
+        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label paidLabel;
         private System.Windows.Forms.Label changeLabel;
         private System.Windows.Forms.Label changeOutput;
@@ -326,8 +289,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label taxOutput;
         private System.Windows.Forms.Label costWithTaxOutput;
-        private System.Windows.Forms.Button changeButton;
-        private System.Windows.Forms.Button receiptButton;
     }
 }
 
